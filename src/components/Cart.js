@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import currencyFormatter from "currency-formatter";
 import { BsDash, BsPlus } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
-import { BsReverseBackspaceReverse } from "react-icons/bs";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const Cart = () => {
   const localData = JSON.parse(localStorage.getItem("cartData"));
@@ -106,8 +106,7 @@ const Cart = () => {
                           dispatch({ type: "REMOVE", payload: product.id })
                         }
                       > 
-                                                       <BsReverseBackspaceReverse />
-
+                        <RiDeleteBinLine />
                       </div>
                     </div>
                   </div>
@@ -146,4 +145,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
